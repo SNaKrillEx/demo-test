@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+        }
+        .container {
+            height: 100%;
+            background-image: linear-gradient(to right, #999999, #330867);
+        }
+        .login-wrapper {
+            background-color: bisque;
+            width: 358px;
+            height: 588px;
+            border-radius: 15px;
+            padding: 0 50px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .header {
+            font-size: 38px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 200px;
+        }
+        .input-item {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 0;
+            padding: 10px;
+            border-bottom: 1px solid rgb(128,125,125);
+            font-size: 15px;
+            outline: none;
+        }
+        .input-item::placeholder {
+            text-transform: uppercase;
+        }
+        .btn {
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: 40px;
+            background-image: linear-gradient(to right,#a6c1ee, #fbc2eb);
+            color: #fff;
+        }
+        .msg {
+            text-align: center;
+            line-height: 88px;
+        }
+        a {
+            text-decoration-line: none;
+            color: #abc1ee;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="login-wrapper">
+        <div class="header">Login</div>
+        <div class="form-wrapper">
+            <input type="text" name="username" placeholder="username" class="input-item">
+            <input type="password" name="password" placeholder="password" class="input-item">
+            <div class="btn">Login</div>
+        </div>
+        <div class="msg">
+            Don't have account?
+            <a href="#">Sign up</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录/注册</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="script" href="login.js">
+    <script>
+        function showLoginForm() {
+            document.getElementById('loginForm').style.display = "block";
+            document.getElementById('registerForm').style.display = "none";
+        }
+
+        function showRegisterForm() {
+            document.getElementById('loginForm').style.display = "none";
+            document.getElementById('registerForm').style.display = "block";
+        }
+
+        function validateLoginForm() {
+            var username = document.forms["loginForm"]["username"].value;
+            var password = document.forms["loginForm"]["password"].value;
+
+            if (username == "") {
+                alert("请输入用户名字");
+                return false;
+            }
+
+            if (password == "") {
+                alert("请输入密码");
+                return false;
+            }
+        }
+
+        function validateRegisterForm() {
+            var username = document.forms["registerForm"]["username"].value;
+            var email = document.forms["registerForm"]["email"].value;
+            var password = document.forms["registerForm"]["password"].value;
+
+            if (username == "") {
+                alert("请输入用户名");
+                return false;
+            }
+
+            if (email == "") {
+                alert("请输入邮箱");
+                return false;
+            }
+
+            if (password == "") {
+                alert("请输入密码");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h2>登录/注册</h2>
+    <div class="tabs">
+        <button class="tab" onclick="showLoginForm()">登录</button>
+        <button class="tab" onclick="showRegisterForm()">注册</button>
+    </div>
+
+    &lt;!&ndash; 登录表单 &ndash;&gt;
+    <form id="loginForm" name="loginForm" style="display: none;" onsubmit="return validateLoginForm()">
+        <div class="form-group">
+            <label for="loginUsername">用户名:</label>
+            <input type="text" id="loginUsername" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="loginPassword">密码:</label>
+            <input type="password" id="loginPassword" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">登录</button>
+        </div>
+    </form>
+
+    &lt;!&ndash; 注册表单 &ndash;&gt;
+    <form id="registerForm" name="registerForm" style="display: none;" onsubmit="return validateRegisterForm()">
+        <div class="form-group">
+            <label for="registerUsername">用户名:</label>
+            <input type="text" id="registerUsername" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="registerEmail">邮箱:</label>
+            <input type="email" id="registerEmail" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="registerPassword">密码:</label>
+            <input type="password" id="registerPassword" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">注册</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>-->
