@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .tp6-1 {
+            width: 198px;
+            height: 50%;
+            border-top: 1px solid red;
+            background-color: #eee8e8;
+            text-align: center;
+        }
+
+        .tp6-1 .time {
+            color: red;
+            margin: 46px 0;
+            font-size: 30px;
+        }
+
+        .text-tip {
+            color: #786262;
+            margin: 30px 0;
+        }
+
+        .pic-sg {
+            width: 19%;
+            height: 17%;
+            margin: auto;
+        }
+
+        .pic-sg img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .count-time {
+            height: 12%;
+            text-align: center;
+        }
+
+        .count-time i {
+            width: 38px;
+            height: 38px;
+            background-color: #7f957f;
+            display: inline-block;
+            font-size: 26px;
+        }
+
+        .count-time span {
+            font-size: 26px;
+        }
+
+    </style>
+
+
+    <script type="text/javascript">
+        function countTime() {
+            //获取当前时间
+            var date = new Date();
+            var hours = date.getHours();//时
+            var minutes = date.getMinutes();//分
+            var seconds = date.getSeconds();//秒
+
+            //统一化为秒数，方便计算
+            var kaishi = seconds + minutes * 60 + hours * 60 * 60;
+            var jieshu = 10 * 60 * 60 + 3 * 60;
+
+            //计算差值
+            var cha;
+            if (hours >= 20) cha = jieshu + 24 * 60 * 60 - kaishi;
+            else cha = jieshu - kaishi;
+            var h, m, s;
+
+            h = Math.floor(cha / 60 / 60 % 24);
+            m = Math.floor(cha / 60 % 60);
+            s = Math.floor(cha % 60);
+
+            // console.log(h+":"+m+":"+s);
+            document.getElementById("_h").innerHTML = h;
+            document.getElementById("_m").innerHTML = m;
+            document.getElementById("_s").innerHTML = s;
+            setTimeout(countTime, 1000);
+        }
+    </script>
+</head>
+<body onload="countTime()">
+<div class="tp6-1">
+    <div class="time">11:00场</div>
+    <div class="pic-sg"><img src="4.JPG" alt="图片异常"></div>
+    <div class="text-tip">距离开始还有</div>
+    <div class="count-time">
+        <i id="_h">00</i>
+        <span>:</span>
+        <i id="_m">00</i>
+        <span>:</span>
+        <i id="_s">00</i>
+    </div>
+</div>
+</body>
+
+
+</html>

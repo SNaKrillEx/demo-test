@@ -1,0 +1,28 @@
+body {
+    background-image: url('ff.png');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.countdown-container {
+    margin-top: 100px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.time-block {
+    margin: 0 10px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
